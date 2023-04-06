@@ -24,7 +24,8 @@ public class FileAccessCA {
     //Ensure all info is valid
     //Output error message if invalid
     //Upload data to new file if valid
-    //This is my second commit to my main github branch i hope im doing this right
+    //This is my third commit to my main github branch we are nearly there
+    //i got bored and changed the String lastName to just Name so i alteast alterted something properly
     
     public static void main(String[] args)throws IOException {
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
@@ -33,7 +34,7 @@ public class FileAccessCA {
             Scanner scanner = new Scanner(new File("C:\\Users\\Adam Canavan\\Downloads\\student.txt")); //Reading from this file
             int counter = 0;
             String student = "N/A";
-            String lastName = "N/A";
+            String Name = "N/A";
             String classes = "N/A";
             String workload = "N/A";
             String studentNumber = "N/A";
@@ -44,7 +45,7 @@ public class FileAccessCA {
                         student = scanner.nextLine();
                         if (student.matches("[a-zA-Z]+\\s[a-zA-Z]+[0-9]*")) { //Students first name must all all letters and last name can include letters
                             String[] studentSplit = student.split("\\s+"); //splitting the users name into two inputs so only last name is uploaded to file
-                            lastName = studentSplit[1];
+                            Name = studentSplit[1];
                             System.out.println("Student Name is valid."); //Meets all requirements!
                         } else {
                             System.out.println("Your name does not match the requirements, please try again."); //Gives error message if info is invalid
@@ -66,7 +67,7 @@ public class FileAccessCA {
                                 workload = "Full time";
                             }
                         } else {
-                            System.out.println("Your number of classes is incorrect try again.");
+                            System.out.println("You are not in that many classes please input the correct amount!.");
                             throw new Exception();
                         }
                         counter++;
@@ -81,7 +82,7 @@ public class FileAccessCA {
                         }
                         counter = 0; //Restarts counter at beginning for next student
                     }
-                    myfile.write(studentNumber + "-" + lastName + "\n" + workload + "\n");
+                    myfile.write(studentNumber + "-" + Name + "\n" + workload + "\n");
                 }
                 scanner.close();
                 myfile.close();
