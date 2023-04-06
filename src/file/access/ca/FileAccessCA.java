@@ -23,7 +23,7 @@ public class FileAccessCA {
     //Code must read data from file
     //Ensure all info is valid
     //Output error message if invalid
-    //Upload data to new file if valid
+    //Upload data to new file if valid 
     
     public static void main(String[] args)throws IOException {
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
