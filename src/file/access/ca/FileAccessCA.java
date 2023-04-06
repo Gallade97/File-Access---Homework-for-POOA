@@ -31,9 +31,9 @@ public class FileAccessCA {
         try {
             Scanner scanner = new Scanner(new File("C:\\Users\\Adam Canavan\\Downloads\\student.txt")); //Reading from this file
             int counter = 0;
-            String student = "N/A";
+            String student;
             String lastName = "N/A";
-            String classes = "N/A";
+            String classes;
             String workload = "N/A";
             String studentNumber = "N/A";
             try {  //Try catch ro ensure all info given meets requirements
