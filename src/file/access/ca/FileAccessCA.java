@@ -24,6 +24,7 @@ public class FileAccessCA {
     //Ensure all info is valid
     //Output error message if invalid
     //Upload data to new file if valid
+    //This is my second commit to my main github branch i hope im doing this right
     
     public static void main(String[] args)throws IOException {
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
@@ -54,7 +55,7 @@ public class FileAccessCA {
                     if (counter == 1) {
                         classes = scanner.nextLine();
                         if (classes.matches("[1-8]")) { //input must be between 1-8 inclusive
-                            System.out.println("Student Class Number is valid."); 
+                            System.out.println("Student Class Number is valid congrats you know it off by heart!."); 
                             if (classes.matches("[1]")) {
                                 workload = "Very light"; //Classes input determines workload
                             } else if (classes.matches("[2]")) {
@@ -73,9 +74,9 @@ public class FileAccessCA {
                     if (counter == 2) {
                         studentNumber = scanner.nextLine();
                         if (studentNumber.matches("[0-9]{2}[a-zA-Z]{2}[a-zA-Z]*[0-9]*")) { //Student number must have 2 numbers 2/3 letters then numbers after
-                            System.out.println("Student number ID is valid.");
+                            System.out.println("Correct. now go to class");
                         } else {
-                            System.out.println("Your Student number ID is incorrect please try again.");
+                            System.out.println("Your Student number ID is incorrect you are not allowed to go to class.");
                             throw new Exception();
                         }
                         counter = 0; //Restarts counter at beginning for next student
