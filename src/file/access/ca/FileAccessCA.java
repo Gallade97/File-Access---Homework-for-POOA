@@ -24,10 +24,11 @@ public class FileAccessCA {
     //Ensure all info is valid
     //Output error message if invalid
     //Upload data to new file if valid
+    //Upload data to new file if valid 
+    //correcting the previous mistakes and trying to organise the code better and comment silly things
+
     
     public static void main(String[] args)throws IOException {
-        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-        //Take input from file and verify it to be correct
         try {
             Scanner scanner = new Scanner(new File("C:\\Users\\Adam Canavan\\Downloads\\student.txt")); //Reading from this file
             int counter = 0;
@@ -86,12 +87,11 @@ public class FileAccessCA {
                 myfile.close();
             }
             catch (FileNotFoundException ex) {
-                System.out.println("Error!"); //incorrect stops info being written
+                System.out.println("Error!"); //for try insdide the try (Tryception)
             }
-        } catch (Exception e) {
-            System.out.println("Error!"); //incorrect info kills programme
         }
- 
- 
- 
-    }}
+        catch (Exception e) {
+            System.out.println("Error!"); //The ulimate trys error if you get something wrong (dont)
+        }
+    }
+}
